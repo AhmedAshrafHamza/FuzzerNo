@@ -11,7 +11,7 @@ void FunctionToBeFuzzed(int data, size_t size) {
 extern "C" {
 
 
-int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
+int LLVMFuzzerTestOneInput(int data, size_t size) {
     FunctionToBeFuzzed(data, size);
     return 0;
     }
